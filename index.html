@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    USERNAME :
+    <input type="text" name="username" placeholder="Username">
+    <p>
+        <label>สาขาวิชา:</label>
+        <select name="dept">
+            <option value="">--Please choose an option--</option>
+            <option value="CS">CS</option>
+            <option value="IC">IC</option>
+            <option value="MA">MA</option>
+            <option value="IMI">IMI</option>
+            <option value="AS">AS</option>
+            <option value="AFET">AFET</option>
+        </select>
+    </p>
+
+    <label for="ename">ชื่อ-สกุล ภาษาอังกฤษ</label> <br>
+    <input type="text" name="ename" pattern="[A-Z\s]+"> <small>*ตัวพิมใหญ่เท่านั้น*</small><br>
+    <label for="tname">ชื่อ-สกุล ภาษาไทย</label> <br>
+    <input type="text" name="tname" pattern="[ก-๏\s]+"> <small>*ภาษาไทยเท่านั้น*</small><br>
+    <label for="id">รหัสนักศึกษา</label> <br>
+    <input type="text" name="id" pattern="[0-9]{2}[\-][0-9]{6}[\-][0-9]{4}[\-][0-9]"> <small>*มี-คั่น เช่น 61-040626-1234-5*</small><br>
+    <label for="pcode">บ้านเลขที่</label> <br>
+    <input type="text" name="pcode" pattern="([0-9]{1,}\/[0-9]{1,}|[0-9]{1,})"> <small>*มี / หรือไม่มีก็ได้*</small><br>
+    <label for="product">รหัสสินค้า</label> <br>
+    <input type="text" name="product" pattern="[A-Z]{3}[0-9]{2}"> <small>*3ตัวแรกเป็อักขระตัวใหญ่ ตามด้วยตัวเลข2ตัว*</small><br>
+    <br>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
